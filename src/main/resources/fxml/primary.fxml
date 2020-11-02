@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="362.0" prefWidth="393.0" stylesheets="@../styles/customStyles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dylanco.FXMLController">
+   <children>
+      <ImageView fitHeight="362.0" fitWidth="526.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../map.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="77.0" layoutY="227.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="84.0" stylesheets="@../styles/customStyles.css" text="Level One&#10;">
+         <styleClass>
+            <String fx:value="smooth-button" />
+            <String fx:value="gradient-gray" />
+         </styleClass></Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="71.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Cube.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="200.0" layoutX="271.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Man.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="148.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../player.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="97.0" layoutX="212.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../spikeMonster.png" />
+         </image>
+         <rotationAxis>
+            <Point3D y="90.0" z="1.0" />
+         </rotationAxis>
+      </ImageView>
+      <Button layoutX="444.0" layoutY="323.0" mnemonicParsing="false" onAction="#quit" prefHeight="25.0" prefWidth="56.0" stylesheets="@../styles/customStyles.css" text="Quit" textFill="WHITE">
+         <styleClass>
+            <String fx:value="smooth-button" />
+            <String fx:value="gradient-red-double" />
+         </styleClass>
+      </Button>
+      <Button fx:id="btnTwo" disable="true" layoutX="348.0" layoutY="227.0" mnemonicParsing="false" onAction="#two" prefHeight="25.0" prefWidth="84.0" stylesheets="@../styles/customStyles.css" text="Level Two&#10;">
+         <styleClass>
+            <String fx:value="smooth-button" />
+            <String fx:value="gradient-gray" />
+         </styleClass>
+      </Button>
+      <Button layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#credits" prefHeight="25.0" prefWidth="56.0" stylesheets="@../styles/customStyles.css" text="Credits&#10;">
+         <styleClass>
+            <String fx:value="smooth-button" />
+            <String fx:value="gradient-gray" />
+         </styleClass>
+      </Button>
+      <Label fx:id="lblDeaths" layoutX="14.0" layoutY="117.0" text="Deaths: 0" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans MT" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+         </effect>
+      </Label>
+      <Button layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#volume" prefHeight="25.0" prefWidth="102.0" stylesheets="@../styles/customStyles.css" text="Change Volume">
+         <styleClass>
+            <String fx:value="smooth-button" />
+            <String fx:value="gradient-gray" />
+         </styleClass>
+      </Button>
+      <ImageView fx:id="imgTrophy" fitHeight="98.0" fitWidth="108.0" layoutX="336.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../trophy.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

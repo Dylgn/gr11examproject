@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#keyPress" onKeyReleased="#keyRelease" prefHeight="425.0" prefWidth="771.0" stylesheets="@../styles/customStyles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dylanco.game1">
+   <children>
+      <AnchorPane prefHeight="425.0" prefWidth="850.0">
+         <children>
+            <ImageView fx:id="imgBackground" fitHeight="618.0" fitWidth="850.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../levelOneBG.png" />
+               </image>
+            </ImageView>
+            <Polygon fx:id="plyGround" fill="LIME" layoutX="215.0" layoutY="470.0" points="-215.0, -45.0, 635.0, -45.0, 635.0, -96.0, -215.0, -96.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancScene1" prefHeight="425.0" prefWidth="850.0" visible="false">
+         <children>
+            <ImageView fx:id="imgKey1" fitHeight="24.0" fitWidth="46.0" layoutX="573.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../keySilver.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLock1" fitHeight="43.0" fitWidth="40.0" layoutX="805.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../lockSilver.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="7.42" radius="3.58" spread="1.0" width="8.9" />
+               </effect>
+            </ImageView>
+            <Label layoutX="96.0" layoutY="147.0" text="Press 'W' or 'Space'  to Jump">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="174.0" text="Jump Again to Double Jump">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="276.0" layoutY="214.0" prefHeight="51.0" prefWidth="111.0" text="Spikes Reset Your&#10;Position To The&#10;Last Checkpoint">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="443.0" layoutY="246.0" prefHeight="36.0" prefWidth="105.0" text="Checkpoints Save&#10;Your Position!">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="655.0" layoutY="33.0" prefHeight="36.0" prefWidth="135.0" text="Keys Open Locks&#10;With the Same Color!">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="586.0" layoutY="183.0" prefHeight="36.0" prefWidth="105.0" text="Monsters also&#10;Reset You!">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="593.0" layoutY="324.0" prefHeight="36.0" prefWidth="177.0" text="Keys and Locks are Saved&#10;When You Hit A Checkpoint">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="166.0" layoutY="219.0" prefHeight="151.0" prefWidth="59.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall1" fill="LIME" points="9.0, 147.0, 49.0, 147.0, 49.0, 1.0, 9.0, 1.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="307.0" layoutY="47.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike1" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall2" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="258.0" layoutY="47.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike2" fill="DODGERBLUE" points="47.0, 37.0, 47.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall3" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="377.0" layoutY="278.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike3" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 1.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall4" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="425.0" prefWidth="850.0">
+               <children>
+                  <Polygon fx:id="plyGround2" fill="LIME" layoutX="215.0" layoutY="470.0" points="-215.0, -45.0, 635.0, -45.0, 635.0, -96.0, -215.0, -96.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="473.0" layoutY="313.0" prefHeight="51.0" prefWidth="60.0">
+               <children>
+                  <Polygon fx:id="plyFlag1" fill="DODGERBLUE" points="14.0, 55.0, 46.0, 55.0, 46.0, 1.0, 14.0, 1.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flag.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="560.0" layoutY="269.0" prefHeight="50.0" prefWidth="242.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="144.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="192.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall5" fill="DODGERBLUE" layoutX="23.0" layoutY="33.0" points="-21.0, -32.0, -21.0, 12.7125244140625, 219.0, 12.7125244140625, 219.0, -31.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="548.0" layoutY="220.0" prefHeight="51.0" prefWidth="255.0">
+               <children>
+                  <ImageView fx:id="imgEnemy" fitHeight="50.0" fitWidth="50.0" layoutX="124.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spikeMonster.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="51.0" fitWidth="50.0" layoutX="205.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy" fill="DODGERBLUE" layoutX="169.0" layoutY="11.0" points="-40.0, 40.0, 1.0, 40.0, 1.0, 2.0, -20.0, -10.0, -40.0, 2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder1" fill="DODGERBLUE" layoutX="23.0" layoutY="24.0" points="-25.0, 22.0, -6.0, 22.0, -6.0, -26.0, -25.0, -26.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBox1" fill="DODGERBLUE" layoutX="33.0" layoutY="34.0" points="172.0, 16.0, 222.0, 16.0, 222.0, -34.0, 172.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="543.0" layoutY="94.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall7" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="800.0" prefHeight="289.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall6" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 120.60723876953125, 36.0, 120.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="48.0" layoutY="253.0" text="Use 'A' and &quot;D'&#10;to move">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancScene3" prefHeight="425.0" prefWidth="850.0" visible="false">
+         <children>
+            <AnchorPane layoutX="137.0" layoutY="332.0" prefHeight="93.0" prefWidth="75.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="48.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike9" fill="DODGERBLUE" layoutX="49.0" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall17" fill="DODGERBLUE" layoutX="59.0" layoutY="10.0" points="36.0, 79.7125244140625, 39.0, 33.0, -59.0, 33.0, -59.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="142.0" layoutY="320.0" prefHeight="51.0" prefWidth="60.0">
+               <children>
+                  <Polygon fx:id="plyFlag2" fill="DODGERBLUE" points="14.0, 55.0, 46.0, 55.0, 46.0, 1.0, 14.0, 1.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flag.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="281.0" layoutY="318.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall18" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="426.0" layoutY="318.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall19" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="354.0" layoutY="256.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike10" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall20" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="-5.0" prefHeight="430.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall21" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-14.0, 256.60723876953125, 36.0, 256.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="353.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall22" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="451.0" layoutY="125.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall24" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="256.0" layoutY="100.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall23" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="800.0" layoutY="-5.0" prefHeight="430.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall29" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 249.0, 30.0, 249.0, 30.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="48.0" layoutY="136.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall25" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imgKey2" fitHeight="24.0" fitWidth="46.0" layoutX="53.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../keySilver.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="622.0" layoutY="389.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall28" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="750.0" layoutY="340.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall27" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="751.0" layoutY="185.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall26" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="251.0" layoutY="175.0" prefHeight="51.0" prefWidth="242.0">
+               <children>
+                  <ImageView fx:id="imgEnemy3" fitHeight="59.0" fitWidth="75.0" layoutX="138.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flyMonster.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D y="90.0" z="1.0" />
+                     </rotationAxis>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy3" fill="DODGERBLUE" layoutX="178.0" layoutY="13.0" points="-19.0, 17.0, -5.0, 29.0, 29.0, 17.0, 7.0, -4.0, -32.0, 4.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder2" fill="DODGERBLUE" layoutX="50.0" layoutY="24.0" points="-50.0, 24.0, -41.0, 24.0, -41.0, -26.0, -50.0, -26.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder3" fill="DODGERBLUE" layoutX="60.0" layoutY="34.0" points="172.0, 16.0, 189.0, 16.0, 189.0, -34.0, 172.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="622.0" layoutY="346.0" prefHeight="36.0" prefWidth="12.0">
+               <children>
+                  <Polygon fx:id="plySpike15" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="684.0" layoutY="346.0" prefHeight="36.0" prefWidth="12.0">
+               <children>
+                  <Polygon fx:id="plySpike16" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="ancScene2" prefHeight="425.0" prefWidth="850.0">
+         <children>
+            <AnchorPane prefHeight="75.0" prefWidth="850.0" visible="false">
+               <children>
+                  <Polygon fx:id="plyGround1" fill="LIME" layoutX="215.0" layoutY="470.0" points="-215.0, -45.0, 635.0, -45.0, 635.0, -96.0, -215.0, -96.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imgLock2" fitHeight="43.0" fitWidth="40.0" layoutX="805.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../lockSilver.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="7.42" radius="3.58" spread="1.0" width="8.9" />
+               </effect>
+            </ImageView>
+            <AnchorPane prefHeight="289.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall8" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 120.60723876953125, 36.0, 120.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="800.0" prefHeight="289.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall9" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 120.60723876953125, 36.0, 120.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="608.0" layoutY="80.0" prefHeight="289.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall10" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 120.60723876953125, 36.0, 120.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="140.0" layoutY="107.0" prefHeight="36.0" prefWidth="12.0">
+               <children>
+                  <Polygon fx:id="plySpike4" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="111.0" layoutY="283.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike5" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall12" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="367.0" layoutY="283.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike6" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall13" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="309.0" layoutY="152.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall14" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="63.0" layoutY="152.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall15" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="108.0" layoutY="324.0" prefHeight="51.0" prefWidth="307.0">
+               <children>
+                  <ImageView fx:id="imgEnemy1" fitHeight="50.0" fitWidth="50.0" layoutX="124.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spikeMonster.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy1" fill="DODGERBLUE" layoutX="169.0" layoutY="11.0" points="-40.0, 40.0, 1.0, 40.0, 1.0, 2.0, -20.0, -10.0, -40.0, 2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="487.0" layoutY="327.0" prefHeight="36.0" prefWidth="12.0">
+               <children>
+                  <Polygon fx:id="plySpike8" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="535.0" layoutY="300.0" prefHeight="53.0" prefWidth="32.0">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall11" fill="DODGERBLUE" layoutX="38.0" layoutY="24.0" points="-38.0, 51.0, 37.0, 51.0, 37.0, -24.0, -38.0, -24.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="544.0" layoutY="241.0" prefHeight="34.0" prefWidth="32.0">
+               <children>
+                  <ImageView fx:id="imgEnemy2" fitHeight="59.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../jumpMonster.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy2" fill="DODGERBLUE" layoutX="28.0" layoutY="40.0" points="-28.0, 19.0, 28.4893798828125, 19.0, 18.0, -29.0, -20.0, -29.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="633.0" layoutY="145.0" prefHeight="51.0" prefWidth="195.0">
+               <children>
+                  <ImageView fx:id="imgEnemy4" fitHeight="59.0" fitWidth="75.0" layoutX="69.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flyMonster.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D y="90.0" z="1.0" />
+                     </rotationAxis>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy4" fill="DODGERBLUE" layoutX="109.0" layoutY="13.0" points="-19.0, 17.0, -5.0, 29.0, 29.0, 17.0, 7.0, -4.0, -32.0, 4.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="59.0" fitWidth="75.0" layoutX="54.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" rotate="-180.0">
+               <image>
+                  <Image url="@../sign.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="7.42" radius="3.58" spread="1.0" width="8.9" />
+               </effect>
+               <rotationAxis>
+                  <Point3D x="180.0" y="-180.0" z="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <AnchorPane layoutX="356.0" layoutY="61.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike17" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall43" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -9.0, 27.0, -9.0, 79.7125244140625" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancScene4" prefHeight="425.0" prefWidth="850.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="289.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall35" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-13.0, 120.60723876953125, 36.0, 120.60723876953125, 36.0, -170.0, -13.0, -170.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="371.0" prefHeight="54.0" prefWidth="850.0">
+               <children>
+                  <Polygon fx:id="plyGround3" fill="LIME" layoutX="215.0" layoutY="99.0" points="-215.0, -45.0, 635.0, -45.0, 635.0, -96.0, -215.0, -96.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="104.0" layoutY="278.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike11" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall30" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -11.0, 27.0, -11.0, 82.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="274.0" prefHeight="96.0" prefWidth="177.0">
+               <children>
+                  <ImageView fitHeight="103.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall32" fill="DODGERBLUE" layoutX="48.0" layoutY="58.0" points="-48.0, -58.0, -48.0, 38.0, 144.0, 38.0, 143.0, -58.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="103.0" fitWidth="96.0" layoutX="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="376.0" layoutY="135.0" prefHeight="128.0" prefWidth="49.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike13" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall33" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="39.0, 130.1749267578125, 39.0, 27.0, -11.0, 27.0, -11.0, 130.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="212.0" layoutY="278.0" prefHeight="90.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutX="-1.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plySpike12" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyWall31" fill="DODGERBLUE" layoutX="10.0" layoutY="10.0" points="36.0, 79.7125244140625, 36.0, 27.0, -11.0, 27.0, -11.0, 82.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="120.0" layoutY="129.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall34" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="322.0" layoutY="218.0" prefHeight="51.0" prefWidth="60.0">
+               <children>
+                  <Polygon fx:id="plyFlag3" fill="DODGERBLUE" points="14.0, 55.0, 46.0, 55.0, 46.0, 1.0, 14.0, 1.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="59.0" fitWidth="60.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flag.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imgKey3" fitHeight="24.0" fitWidth="46.0" layoutX="57.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../keySilver.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgLock3" fitHeight="43.0" fitWidth="40.0" layoutX="381.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../lockSilver.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="7.42" radius="3.58" spread="1.0" width="8.9" />
+               </effect>
+            </ImageView>
+            <AnchorPane layoutX="42.0" layoutY="222.0" prefHeight="51.0" prefWidth="270.0">
+               <children>
+                  <ImageView fx:id="imgEnemy5" fitHeight="59.0" fitWidth="75.0" layoutX="69.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../flyMonster.png" />
+                     </image>
+                     <rotationAxis>
+                        <Point3D y="90.0" z="1.0" />
+                     </rotationAxis>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy5" fill="DODGERBLUE" layoutX="109.0" layoutY="13.0" points="-19.0, 17.0, -5.0, 29.0, 29.0, 17.0, 7.0, -4.0, -32.0, 4.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder4" fill="DODGERBLUE" layoutX="60.0" layoutY="34.0" points="194.0, 17.0, 210.0, 17.0, 210.0, -34.0, 194.0, -34.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="107.0" layoutY="79.0" prefHeight="51.0" prefWidth="163.0">
+               <children>
+                  <ImageView fx:id="imgEnemy6" fitHeight="50.0" fitWidth="50.0" layoutX="72.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spikeMonster.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy6" fill="DODGERBLUE" layoutX="117.0" layoutY="11.0" points="-40.0, 40.0, 1.0, 40.0, 1.0, 2.0, -20.0, -10.0, -40.0, 2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder5" fill="DODGERBLUE" layoutX="70.0" layoutY="44.0" points="79.0, 7.0, 93.0, 7.0, 93.0, -44.0, 79.0, -44.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <Polygon fx:id="plyBorder6" fill="DODGERBLUE" layoutX="80.0" layoutY="54.0" points="-80.0, 0.0, -67.0, 0.0, -67.0, -54.0, -80.0, -54.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="376.0" prefHeight="11.0" prefWidth="0.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall36" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 29.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 29.1749267578125" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="800.0" layoutY="38.0" prefHeight="283.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall37" fill="DODGERBLUE" layoutX="14.0" layoutY="173.0" points="-14.0, 158.60723876953125, 36.0, 158.60723876953125, 36.0, -207.0, -14.0, -207.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="50.0" layoutY="-60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickTall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="704.0" layoutY="274.0" prefHeight="96.0" prefWidth="61.0">
+               <children>
+                  <Polygon fx:id="plyWall38" fill="DODGERBLUE" layoutX="-48.0" layoutY="58.0" points="48.0, -58.0, 48.0, 38.0, 144.0, 38.0, 143.0, -58.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="103.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="512.0" layoutY="129.0" prefHeight="18.0" prefWidth="118.0">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../grassFloating.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall39" fill="DODGERBLUE" layoutX="56.0" layoutY="16.0" points="-50.0, 20.0, 79.0, 20.0, 79.0, -16.0, -50.0, -16.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="499.0" layoutY="68.0" prefHeight="58.0" prefWidth="61.0">
+               <children>
+                  <Polygon fx:id="plyWall40" fill="DODGERBLUE" layoutX="-48.0" layoutY="58.0" points="48.0, -58.0, 48.0, 3.0, 109.0, 3.0, 109.0, -58.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="67.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="499.0" layoutY="8.0" prefHeight="58.0" prefWidth="61.0">
+               <children>
+                  <Polygon fx:id="plyWall41" fill="DODGERBLUE" layoutX="-48.0" layoutY="58.0" points="48.0, -58.0, 48.0, 3.0, 109.0, 3.0, 109.0, -58.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="67.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../boxSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="443.0" layoutY="322.0" prefHeight="54.0" prefWidth="270.0">
+               <children>
+                  <ImageView fx:id="imgEnemy7" fitHeight="50.0" fitWidth="50.0" layoutX="72.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spikeMonster.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyEnemy7" fill="DODGERBLUE" layoutX="117.0" layoutY="11.0" points="-40.0, 40.0, 1.0, 40.0, 1.0, 2.0, -20.0, -10.0, -40.0, 2.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="560.0" layoutY="165.0" prefHeight="96.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+                  <Polygon fx:id="plyWall42" fill="DODGERBLUE" layoutX="69.0" layoutY="20.0" points="-19.0, 78.1749267578125, -19.0, -20.0, -69.0, -20.0, -69.0, 79.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../brickSmall.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="704.0" layoutY="231.0" prefHeight="36.0" prefWidth="12.0">
+               <children>
+                  <Polygon fx:id="plySpike14" fill="DODGERBLUE" points="47.0, 37.0, 36.0, 3.0, 11.0, 3.0, 1.0, 37.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+                  <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../spike.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imgTrophy" fitHeight="43.0" fitWidth="40.0" layoutX="590.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../trophy.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="7.42" radius="3.58" spread="1.0" width="8.9" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancPlayer" layoutY="327.0" prefHeight="33.0" prefWidth="42.0">
+         <children>
+            <Polygon fx:id="plyPlayer" fill="LIME" layoutX="227.0" layoutY="545.0" points="-219.0, -502.18182373046875, -175.0, -502.18182373046875, -175.0, -545.0, -219.0, -545.0" stroke="LIME" strokeType="INSIDE" visible="false" />
+            <ImageView fx:id="imgPlayer" fitHeight="45.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../player.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ancPause" prefHeight="425.0" prefWidth="850.0">
+         <children>
+            <ImageView fitHeight="208.0" fitWidth="293.0" layoutX="248.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../player.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="123.0" fitWidth="122.0" layoutX="337.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../spikeMonster.png" />
+               </image>
+               <rotationAxis>
+                  <Point3D y="90.0" z="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="85.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Game.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="75.0" fitWidth="270.0" layoutX="496.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Paused.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblDeaths" layoutX="51.0" layoutY="203.0" text="Deaths: 0" textFill="WHITE">
+               <font>
+                  <Font name="Gill Sans MT" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+               </effect>
+            </Label>
+            <Label layoutX="557.0" layoutY="222.0" onMouseClicked="#lblReturn" stylesheets="@../styles/customStyles.css" text=" Return to Menu ">
+               <font>
+                  <Font name="Gill Sans MT" size="36.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="round-button-border" />
+                  <String fx:value="gradient-gray" />
+               </styleClass>
+            </Label>
+            <Label layoutX="616.0" layoutY="164.0" onMouseClicked="#lblResume" stylesheets="@../styles/customStyles.css" text=" Resume ">
+               <font>
+                  <Font name="Gill Sans MT" size="36.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="round-button-border" />
+                  <String fx:value="gradient-gray" />
+               </styleClass>
+            </Label>
+            <Label layoutX="618.0" layoutY="278.0" onMouseClicked="#lblVolume" stylesheets="@../styles/customStyles.css" text=" Volume ">
+               <font>
+                  <Font name="Gill Sans MT" size="36.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="round-button-border" />
+                  <String fx:value="gradient-gray" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
